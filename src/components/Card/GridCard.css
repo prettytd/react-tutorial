@@ -1,0 +1,37 @@
+.grid-card {
+  --margin: 10px;
+  text-align: left;
+  width: 300px;
+  height: 400px;
+  margin: var(--margin);
+  padding: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #eaeaea;
+  box-shadow: 4px 4px 5px #aaa;
+  background-color: #eaeaea;
+
+  display: grid;
+  grid-template-rows: 200px min-content auto min-content;
+  row-gap: var(--margin);
+}
+
+.grid-card-image {
+  overflow: hidden;
+}
+
+.grid-card-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: fill;
+}
+
+.grid-card-title {
+  font-size: 25px;
+}
+
+.grid-card-actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
