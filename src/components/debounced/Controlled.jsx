@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect } from "react";
 import _debounce from "lodash.debounce";
 
-export const LodashDebounce = () => {
+export const Controlled = () => {
   const [term, setTerm] = useState("");
 
   const handleChange = (e) => {
@@ -13,7 +13,7 @@ export const LodashDebounce = () => {
       return;
     }
 
-    console.log("calling api", term);
+    console.log("controlled calling api", term);
   };
 
   const debouncedCallApi = useCallback(_debounce(callApi, 500), [term]);
@@ -26,8 +26,13 @@ export const LodashDebounce = () => {
 
   return (
     <>
-      <h1>Using Lodash.debounce</h1>
-      <input type="text" value={term} onChange={handleChange} />
+      <h1>Controlled</h1>
+      <input
+        type="text"
+        placeholder="Controlled..."
+        value={term}
+        onChange={handleChange}
+      />
     </>
   );
 };

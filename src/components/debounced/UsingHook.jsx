@@ -1,4 +1,4 @@
-import { useDebouncedSearch } from "../../../hooks/useDebouncedSearch";
+import { useDebouncedSearch } from "../../hooks/useDebouncedSearch";
 
 const searchStarwarsHeroAsync = async (text) => {
   console.log(text);
